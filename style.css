@@ -138,4 +138,7 @@ body {
 .wind{
     width: 85px;
 }
+.card-s{
+    margin: 10px auto 0; 
+}
 }
