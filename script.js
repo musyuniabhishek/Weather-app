@@ -7,14 +7,20 @@ const icon = document.querySelector(".weather-icon")
 const main = document.querySelector("body")
 
 async function checkweather(city) {
+
+
     const response = await fetch(apiurl + `key=${apikey}` + `&q= ${city}`)
+
+
 
     if(response.status == 400) {
         document.querySelector(".error").style.display = "block"
         document.querySelector(".weather").style.display = "none"
     }
     else {
+
         var data = await response.json()
+
 
 
         document.querySelector(".city").innerHTML = data.location.name
@@ -47,10 +53,13 @@ async function checkweather(city) {
         document.querySelector(".weather").style.display = "block"
         document.querySelector(".error").style.display = "none"
     }
-    console.log(data)
 }
 
 
 btn.addEventListener("click", () => {
     checkweather(search.value)
 })
+
+window.addEventListener("load", () => {
+    checkweather("india")
+});
