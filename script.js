@@ -1,5 +1,5 @@
 const apikey = "38b42df1506e4ccead1110329230706"
-const apiurl = "http://api.weatherapi.com/v1/current.json?"
+const apiurl = "https://api.weatherapi.com/v1/current.json?"
 
 const search = document.getElementById("search")
 const btn = document.getElementById("btn")
