@@ -12,23 +12,13 @@ body {
     backdrop-filter: blur(10px);
 }
 
-.main {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
+.main-text{
+    font-size: 6rem;
+    font-weight: 800;
 }
 
-
-.content {
-    margin: 12% auto;
-    color: #fff;
-    font-size: 60px;
-}
-
-.card {
-    width: 90%;
+.card-s {
+    width: 100%;
     max-width: 470px;
     height: 90%;
     background: linear-gradient(135deg, #00febaf6, #5b548a);
@@ -95,15 +85,16 @@ body {
     justify-content: space-between;
     padding: 0 20px;
     margin-top: 50px;
+    gap: 30px;
 }
 
-.col {
+.box {
     display: flex;
     align-items: center;
     text-align: left;
 }
 
-.col img {
+.box img {
     width: 40px;
     margin-right: 10px;
 }
@@ -124,4 +115,27 @@ body {
     font-size: 14px;
     margin-top: 10px;
     display: none;
+}
+
+@media (min-width: 320px) and (max-width: 768px){
+    .card-s{
+        padding: 10px 5px;
+    }
+    .search input{
+        margin-right: 0px;
+        padding: 10px 10px;
+    }
+    .box{
+        width: 200px;
+        text-align: center;
+        justify-content: space-between;
+    }
+    .details {
+       flex-wrap: wrap;
+       justify-content: center;
+    }
+    .humidity,
+.wind{
+    width: 85px;
+}
 }
